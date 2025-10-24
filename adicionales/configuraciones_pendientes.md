@@ -8,3 +8,15 @@ SENDER_EMAIL - El email desde el que se enviarán los mensajes
 SENDER_PASSWORD - La contraseña o "App Password" del email
 RECEIVER_EMAIL - El email del emprendimiento donde recibirás los mensajes de contacto
 Importante: Si usas Gmail, necesitas crear una "App Password" en lugar de usar tu contraseña normal. Ve a tu cuenta de Google → Seguridad → Verificación en dos pasos → Contraseñas de aplicaciones.
+
+
+
+COLORES
+
+#e36849 -> principal
+#f79621 -> fondo del header - las letras "Buena Vida" ponerlas en blanco
+#ffbe2f -> fondos arena, boton formulario
+#33b3b2 -> complementario al principal
+#8ad0ce -> fondo de iconos, botones 
+#137c78 -> color de los iconos
+#8adoce

@@ -19,7 +19,8 @@ def hero() -> rx.Component:
                         rx.el.button(
                             "Ver Actividades",
                             rx.icon("arrow-down", class_name="ml-2"),
-                            class_name="bg-sky-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105",
+                            class_name="flex items-center justify-center bg-sky-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105",
+                            #class_name="flex items-center justify-center h-16 w-16 rounded-2xl bg-sky-100"
                         ),
                         href="#servicios",
                     ),

@@ -6,14 +6,15 @@ def service_card(service: Service) -> rx.Component:
     return rx.el.div(
         rx.el.div(
             rx.icon(service["icon"], class_name="text-sky-500", size=36),
-            class_name="bg-sky-100/70 p-4 rounded-full mb-5",
+            #class_name="bg-sky-100/70 p-4 rounded-full mb-5",
+            class_name="flex items-center justify-center h-16 w-16 rounded-2xl bg-sky-100"
         ),
         rx.el.h3(service["title"], class_name="text-xl font-bold text-gray-800 mb-2"),
         rx.el.p(
             service["description"],
             class_name="text-gray-600 leading-relaxed font-medium",
         ),
-        class_name="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300",
+        class_name="bg-white p-8 rounded-m border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300",
     )
 
 

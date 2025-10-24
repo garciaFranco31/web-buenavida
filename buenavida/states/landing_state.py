@@ -1,7 +1,15 @@
 import reflex as rx
 from typing import TypedDict
 import re
+import json
 
+def open_file() -> list[dict]:
+    with open("adicionales/services.json", "r") as f:
+        return json.load(f)
+
+def open_file_testimonials() -> list[dict]:
+    with open("adicionales/testimonials.json", "r") as f:
+        return json.load(f)
 
 class Service(TypedDict):
     icon: str
@@ -21,50 +29,12 @@ def is_valid_email(email: str) -> bool:
 
 
 class LandingState(rx.State):
-    services: list[Service] = [
-        {
-            "icon": "waves",
-            "title": "Clases de Natación",
-            "description": "Aprende a nadar con nuestros instructores certificados. Clases para todas las edades y niveles.",
-        },
-        {
-            "icon": "sun",
-            "title": "Pileta Libre",
-            "description": "Disfruta de nuestra pileta a tu propio ritmo. Ideal para relajarse y entrenar libremente.",
-        },
-        {
-            "icon": "smile",
-            "title": "Colonia de Vacaciones",
-            "description": "Diversión garantizada para los más chicos con juegos, deportes y actividades acuáticas supervisadas.",
-        },
-        {
-            "icon": "dumbbell",
-            "title": "Entrenamiento Funcional",
-            "description": "Complementa tu rutina acuática con clases de acondicionamiento físico en nuestro gimnasio.",
-        },
-        {
-            "icon": "utensils-crossed",
-            "title": "Servicio de Buffet",
-            "description": "Recarga energías con nuestras opciones saludables y deliciosas en el buffet junto a la pileta.",
-        },
-    ]
-    testimonials: list[Testimonial] = [
-        {
-            "avatar": "https://api.dicebear.com/9.x/notionists/svg?seed=Ana",
-            "name": "Ana García",
-            "text": "¡La mejor colonia de vacaciones! Mis hijos la pasaron genial y aprendieron un montón. El equipo es súper profesional y amable.",
-        },
-        {
-            "avatar": "https://api.dicebear.com/9.x/notionists/svg?seed=Carlos",
-            "name": "Carlos Martinez",
-            "text": "Las clases de natación son excelentes. El instructor fue muy paciente y me ayudó a superar mi miedo al agua. ¡Ahora disfruto nadar!",
-        },
-        {
-            "avatar": "https://api.dicebear.com/9.x/notionists/svg?seed=Laura",
-            "name": "Laura Fernandez",
-            "text": "Me encanta venir a la pileta libre para relajarme después del trabajo. El ambiente es tranquilo y las instalaciones están siempre impecables.",
-        },
-    ]
+    services: list[Service] = open_file()
+    
+    testimonials: list[Testimonial] = open_file_testimonials()  
+
+    
+
     toast_message: str = ""
     show_toast: bool = False
 
@@ -77,3 +47,7 @@ class LandingState(rx.State):
             return
         self.toast_message = "¡Gracias por tu mensaje! Te contactaremos pronto."
         yield rx.toast.success(self.toast_message)
+
+    @rx.event
+    def toggle_mobile_menu(self):
+        self.is_mobile_menu_open = not self.is_mobile_menu_open

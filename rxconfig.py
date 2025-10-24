@@ -4,6 +4,7 @@ config = rx.Config(
     app_name="buenavida",
     plugins=[
         rx.plugins.SitemapPlugin(),
-        rx.plugins.TailwindV4Plugin(),
+        rx.plugins.TailwindV4Plugin(
+        ),
     ]
 )

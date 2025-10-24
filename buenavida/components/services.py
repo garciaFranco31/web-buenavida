@@ -1,13 +1,14 @@
 import reflex as rx
 from buenavida.states.landing_state import LandingState, Service
-
+from buenavida.states.theme_state import ThemeState
 
 def service_card(service: Service) -> rx.Component:
     return rx.el.div(
         rx.el.div(
-            rx.icon(service["icon"], class_name="text-sky-500", size=36),
+            rx.icon(service["icon"], class_name="text-sky-500", size=36, color=ThemeState.icon_color),
             #class_name="bg-sky-100/70 p-4 rounded-full mb-5",
-            class_name="flex items-center justify-center h-16 w-16 rounded-2xl bg-sky-100"
+            class_name="flex items-center justify-center h-16 w-16 rounded-2xl",
+            background_color=ThemeState.icon_bg
         ),
         rx.el.h3(service["title"], class_name="text-xl font-bold text-gray-800 mb-2"),
         rx.el.p(

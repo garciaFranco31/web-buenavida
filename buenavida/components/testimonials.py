@@ -1,6 +1,6 @@
 import reflex as rx
 from buenavida.states.landing_state import LandingState, Testimonial
-
+from buenavida.states.theme_state import ThemeState
 
 def testimonial_card(testimonial: Testimonial) -> rx.Component:
     return rx.el.div(
@@ -47,5 +47,5 @@ def testimonials() -> rx.Component:
             class_name="container mx-auto px-6 py-20",
         ),
         id="testimonios",
-        class_name="bg-amber-50",
+        background_color=ThemeState.form_button_bg,
     )

@@ -1,6 +1,6 @@
 import reflex as rx
 from buenavida.states.landing_state import LandingState
-
+from buenavida.states.theme_state import ThemeState
 
 def cta() -> rx.Component:
     return rx.el.section(
@@ -54,5 +54,5 @@ def cta() -> rx.Component:
             class_name="container mx-auto px-6 py-20",
         ),
         id="contacto",
-        class_name="bg-gradient-to-r from-sky-500 to-cyan-500",
+        background_color= ThemeState.primary_complementary,
     )

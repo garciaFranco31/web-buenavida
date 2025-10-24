@@ -1,4 +1,5 @@
 import reflex as rx
+from buenavida.states.theme_state import ThemeState
 
 
 def hero() -> rx.Component:
@@ -7,7 +8,7 @@ def hero() -> rx.Component:
             rx.el.div(
                 rx.el.h1(
                     "Disfruta el Verano al Máximo en ",
-                    rx.el.span("Buena Vida", class_name="text-sky-500"),
+                    rx.el.span("Buena Vida", color="#ffff"),
                     class_name="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight tracking-tighter",
                 ),
                 rx.el.p(
@@ -19,7 +20,8 @@ def hero() -> rx.Component:
                         rx.el.button(
                             "Ver Actividades",
                             rx.icon("arrow-down", class_name="ml-2"),
-                            class_name="flex items-center justify-center bg-sky-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105",
+                            class_name="flex items-center justify-center text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105",
+                            background_color=ThemeState.icon_bg,
                             #class_name="flex items-center justify-center h-16 w-16 rounded-2xl bg-sky-100"
                         ),
                         href="#servicios",
@@ -30,5 +32,6 @@ def hero() -> rx.Component:
             ),
             class_name="container mx-auto px-6 py-20 md:py-32",
         ),
-        class_name="relative bg-amber-50",
+        class_name="relative",
+        background_color=ThemeState.header_bg,
     )

@@ -1,4 +1,0 @@
-"""
-    VARIABLES DE COLORES
-"""
-

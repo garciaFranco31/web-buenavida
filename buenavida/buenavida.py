@@ -1,5 +1,5 @@
 import reflex as rx
-from buenavida.components.navbar import navbar
+from buenavida.components.navbar3 import navbar
 from buenavida.components.hero import hero
 from buenavida.components.services import services
 from buenavida.components.testimonials import testimonials
@@ -15,7 +15,7 @@ def index() -> rx.Component:
         hero(),
         services(),
         testimonials(),
-        cta(),
+        #cta(),
         #contact_form(),
         footer(),
         class_name="font-['Montserrat'] bg-white",

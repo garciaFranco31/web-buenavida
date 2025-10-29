@@ -29,6 +29,7 @@ def is_valid_email(email: str) -> bool:
 
 
 class LandingState(rx.State):
+    is_mobile_menu_open: bool = False
     services: list[Service] = open_file()
     
     testimonials: list[Testimonial] = open_file_testimonials()  

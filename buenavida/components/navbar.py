@@ -34,7 +34,7 @@ def navbar() -> rx.Component:
                 ),
                 href="#contacto",
             ),
-            cclass_name="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center",
+                class_name="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center",
         ),
         class_name="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100",
     )

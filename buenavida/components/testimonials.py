@@ -27,25 +27,47 @@ def testimonial_card(testimonial: Testimonial) -> rx.Component:
 
 
 def testimonials() -> rx.Component:
+    # return rx.el.section(
+    #     rx.el.div(
+    #         rx.el.div(
+    #             rx.el.h2(
+    #                 "Lo que dicen nuestros clientes",
+    #                 class_name="text-3xl md:text-4xl font-bold text-gray-800",
+    #             ),
+    #             rx.el.p(
+    #                 "Estamos orgullosos de la comunidad que hemos construido.",
+    #                 class_name="mt-4 text-lg text-gray-600",
+    #             ),
+    #             class_name="text-center mb-12",
+    #         ),
+    #         rx.el.div(
+    #             rx.foreach(LandingState.testimonials, testimonial_card),
+    #             class_name="space-y-8",
+    #         ),
+    #         class_name="container mx-auto px-6 py-20",
+    #     ),
+    #     id="testimonios",
+    #     background_color=ThemeState.form_button_bg,
+    # )
     return rx.el.section(
         rx.el.div(
             rx.el.div(
                 rx.el.h2(
                     "Lo que dicen nuestros clientes",
-                    class_name="text-3xl md:text-4xl font-bold text-gray-800",
+                    class_name="text-3xl md:text-4xl font-bold text-center text-gray-800",
                 ),
                 rx.el.p(
                     "Estamos orgullosos de la comunidad que hemos construido.",
-                    class_name="mt-4 text-lg text-gray-600",
+                    class_name="mt-4 max-w-2xl mx-auto text-lg text-center text-gray-600",
                 ),
-                class_name="text-center mb-12",
+                class_name="mb-16",
             ),
             rx.el.div(
                 rx.foreach(LandingState.testimonials, testimonial_card),
-                class_name="space-y-8",
+                class_name="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
             ),
-            class_name="container mx-auto px-6 py-20",
+            class_name="container mx-auto px-4 sm:px-6 lg:px-8 py-24",
         ),
-        id="testimonios",
+        id="testimonials",
         background_color=ThemeState.form_button_bg,
     )

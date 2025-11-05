@@ -15,6 +15,14 @@ def service_card(service: Service) -> rx.Component:
             service["description"],
             class_name="text-gray-600 leading-relaxed font-medium",
         ),
+        rx.el.button(
+            rx.link(
+                "Ver Mas",
+                href="#",
+                class_name="bg-sky-100/70 p-2 rounded-full mb-5",
+            ),
+            class_name="flex items-center justify-center mt-6",
+        ),
         class_name="bg-white p-8 rounded-m border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300",
     )
 

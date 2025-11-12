@@ -1,26 +1,31 @@
     [{
-            "icon": "waves",
-            "title": "Clases de Natación",
-            "description": "Aprende a nadar con nuestros instructores certificados. Clases para todas las edades y niveles."
-        },
-        {
-            "icon": "sun",
-            "title": "Pileta Libre",
-            "description": "Disfruta de nuestra pileta a tu propio ritmo. Ideal para relajarse y entrenar libremente."
-        },
-        {
             "icon": "smile",
-            "title": "Colonia de Vacaciones",
-            "description": "Diversión garantizada para los más chicos con juegos, deportes y actividades acuáticas supervisadas."
+            "title": "Colonia de Verano",
+            "description": "Aprende a nadar con nuestros instructores certificados. Clases para todas las edades y niveles.",
+            "inscripcion" : ""
         },
         {
-            "icon": "utensils-crossed",
-            "title": "Servicio de Buffet",
-            "description": "Recarga energías con nuestras opciones saludables y deliciosas en el buffet junto a la pileta."
+            "icon": "waves",
+            "title": "Natación para Adultxs",
+            "description": "Clases para todos los niveles, animate a aprender a nadar y/o a perfeccionar tu ténica en el agua. Días y Horarios: Lunes a viernes: 18, 19 y 20hs Sabados: 09, 10hs.",
+            "inscripcion" : ""
         },
         {
-            "icon": "utensils-crossed",
-            "title": "Servicio de Buffet",
-            "description": "Recarga energías con nuestras opciones saludables y deliciosas en el buffet junto a la pileta."
+            "icon": "waves",
+            "title": "Natación para Niñxs",
+            "description": "Clases para todos los niveles, diversión garantizada para los más chicos, para que aprendar a nadar por medio de actividades y juegos. Días y horarios: Lunes a Viernes: 17, 18hs Sabados: 09, 10hs.",
+            "inscripcion" : ""
+        },
+        {
+            "icon": "waves",
+            "title": "Gimnasia Acuática",
+            "description": "Todos los niveles. Días y Horarios: Miercoles 18 a 19hs y Sábados 15 a 16hs.",
+            "inscripcion" : ""
+        },
+        {
+            "icon": "waves",
+            "title": "Pase Social",
+            "description": "Vení a pasar el día y a descansar bajo el sol en la playita de Maipu. Sábados y Domingos: 16 a 20hs.",
+            "inscripcion" : ""
         }
     ]

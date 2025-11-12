@@ -11,6 +11,11 @@ def navbar() -> rx.Component:
             ),
             rx.el.nav(
                 rx.el.a(
+                    "Sobre Nosotrxs",
+                    href="#about_us",
+                    class_name="text-gray-600 font-medium hover:text-sky-500 transition-colors",
+                ),
+                rx.el.a(
                     "Servicios",
                     href="#servicios",
                     class_name="text-gray-600 font-medium hover:text-sky-500 transition-colors",

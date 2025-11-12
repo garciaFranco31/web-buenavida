@@ -18,7 +18,7 @@ def service_card(service: Service) -> rx.Component:
         rx.el.button(
             rx.link(
                 "Ver Mas",
-                href="#",
+                href=service["inscripcion"],
                 class_name="bg-sky-100/70 p-2 rounded-full mb-5",
             ),
             class_name="flex items-center justify-center mt-6",

@@ -12,7 +12,7 @@ def hero() -> rx.Component:
                     class_name="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight tracking-tighter",
                 ),
                 rx.el.p(
-                    "Tu oasis de actividades acuáticas, entrenamiento y relax. Todo lo que necesitas para un estilo de vida activo y saludable.",
+                    "Bienvenidxs a la playita de Maipú!",
                     class_name="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto",
                 ),
                 rx.el.div(

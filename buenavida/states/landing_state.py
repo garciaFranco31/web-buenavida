@@ -15,6 +15,7 @@ class Service(TypedDict):
     icon: str
     title: str
     description: str
+    inscripcion: str
 
 
 class Testimonial(TypedDict):

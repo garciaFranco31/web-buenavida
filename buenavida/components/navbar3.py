@@ -25,7 +25,7 @@ def navbar() -> rx.Component:
                     nav_link("Servicios", "#servicios"),
                     nav_link("Testimonios", "#testimonios"),
                     #nav_link("Contacto", "#contacto"),
-                    class_name="hidden md:flex items-center gap-8",
+                    class_name="hidden md:flex items-center gap-8 text-black font-medium",
                 ),
                 rx.el.div(
                     rx.el.a(
@@ -59,7 +59,7 @@ def navbar() -> rx.Component:
                         href="#servicios",
                         class_name="w-full text-center mt-4 px-4 py-2 bg-teal-600 text-white font-semibold rounded-md shadow-sm hover:bg-teal-700",
                     ),
-                    class_name="md:hidden flex flex-col items-center gap-4 pt-4 pb-4 border-t border-gray-200",
+                    class_name="md:hidden flex flex-col items-center gap-4 pt-4 pb-4 border-t border-gray-200 text-black font-medium",
                 ),
                 None,
             ),

@@ -14,7 +14,7 @@ def index() -> rx.Component:
         navbar(),
         hero(),
         services(),
-        testimonials(),
+        #testimonials(),
         #cta(),
         #contact_form(),
         footer(),

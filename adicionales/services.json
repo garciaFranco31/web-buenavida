@@ -1,31 +1,36 @@
     [{
-            "icon": "smile",
+            "icon": "sun",
             "title": "Colonia de Verano",
             "description": "Aprende a nadar con nuestros instructores certificados. Clases para todas las edades y niveles.",
-            "inscripcion" : ""
+            "time": "Días y Horarios: Lunes a viernes: 8hs a 17hs",
+            "inscripci  on" : ""
         },
         {
-            "icon": "waves",
+            "icon": "waves-ladder",
             "title": "Natación para Adultxs",
-            "description": "Clases para todos los niveles, animate a aprender a nadar y/o a perfeccionar tu ténica en el agua. Días y Horarios: Lunes a viernes: 18, 19 y 20hs Sabados: 09, 10hs.",
-            "inscripcion" : ""
+            "description": "Clases para todos los niveles, animate a aprender a nadar y/o a perfeccionar tu ténica en el agua.",
+            "time":"Días y Horarios: Lunes a viernes: 18, 19 y 20hs Sabados: 09, 10hs.",
+            "inscripcion" : "https://forms.gle/5sJuKxwU1Y1LwhMUA"
         },
         {
-            "icon": "waves",
+            "icon": "waves-ladder",
             "title": "Natación para Niñxs",
-            "description": "Clases para todos los niveles, diversión garantizada para los más chicos, para que aprendar a nadar por medio de actividades y juegos. Días y horarios: Lunes a Viernes: 17, 18hs Sabados: 09, 10hs.",
-            "inscripcion" : ""
+            "description": "Clases para todos los niveles, diversión garantizada para los más chicos, para que aprendar a nadar por medio de actividades y juegos.",
+            "time": "Días y horarios: Lunes a Viernes: 17, 18hs Sabados: 09, 10hs.",
+            "inscripcion" : "https://forms.gle/XvVU5DMqtWbsgZxC9"
         },
         {
             "icon": "waves",
             "title": "Gimnasia Acuática",
-            "description": "Todos los niveles. Días y Horarios: Miercoles 18 a 19hs y Sábados 15 a 16hs.",
-            "inscripcion" : ""
+            "description": "Todos los niveles.",
+            "time": "Días y Horarios: Miercoles 18 a 19hs y Sábados 15 a 16hs.",
+            "inscripcion" : "https://forms.gle/cpbJidvVfjaRNLtY7"
         },
         {
-            "icon": "waves",
+            "icon": "tree-palm",
             "title": "Pase Social",
-            "description": "Vení a pasar el día y a descansar bajo el sol en la playita de Maipu. Sábados y Domingos: 16 a 20hs.",
-            "inscripcion" : ""
+            "description": "Vení a pasar el día y a descansar bajo el sol en la playita de Maipu.",
+            "time": "Días y horarios: Sábados y Domingos: 16 a 20hs.", 
+            "inscripcion" : "https://forms.gle/tYChadjSyWPgSyfy6"
         }
     ]

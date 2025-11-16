@@ -10,12 +10,22 @@ def open_file() -> list[dict]:
 def open_file_testimonials() -> list[dict]:
     with open("adicionales/testimonials.json", "r") as f:
         return json.load(f)
+    
+
 
 class Service(TypedDict):
     icon: str
     title: str
     description: str
+    time: str
     inscripcion: str
+
+    # @rx.var
+    # def format_service(self) -> tuple[str,str]:
+    #     if ":" in self.time:
+    #         time_part = self.time.split(":", 1)
+    #         return (f"{time_part[0]}:", time_part[1].strip())
+    #     return ("", self.time)
 
 
 class Testimonial(TypedDict):

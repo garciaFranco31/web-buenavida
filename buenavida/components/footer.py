@@ -23,7 +23,7 @@ def footer() -> rx.Component:
                         "instagram",
                         class_name="text-gray-500 hover:text-sky-500 transition-colors",
                     ),
-                    href="#",
+                    href="https://www.instagram.com/buenavida.clubsocial?igsh=Z2dueGE0ZmVwemV6",
                 ),
                 rx.el.a(
                     rx.icon(

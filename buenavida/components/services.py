@@ -2,11 +2,17 @@ import reflex as rx
 from buenavida.states.landing_state import LandingState, Service
 from buenavida.states.theme_state import ThemeState
 
+# @rx.var
+# def format(service: Service) -> tuple[str, str]:
+#     if ":" in service["time"]:
+#         part = service["time"].split(":", 1)
+#         return (f"{part[0]}:", part[1].strip())
+#     return ("", service["time"])
+
 def service_card(service: Service) -> rx.Component:
     return rx.el.div(
         rx.el.div(
             rx.icon(service["icon"], class_name="text-sky-500", size=36, color=ThemeState.icon_color),
-            #class_name="bg-sky-100/70 p-4 rounded-full mb-5",
             class_name="flex items-center justify-center h-16 w-16 rounded-2xl",
             background_color=ThemeState.icon_bg
         ),
@@ -14,6 +20,12 @@ def service_card(service: Service) -> rx.Component:
         rx.el.p(
             service["description"],
             class_name="text-gray-600 leading-relaxed font-medium",
+        ),
+        rx.el.p(
+            rx.el.span(
+                service["time"],
+                class_name="text-gray-600 leading-relaxed font-medium mt-2",
+            ),
         ),
         rx.el.button(
             rx.link(

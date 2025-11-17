@@ -24,18 +24,19 @@ def service_card(service: Service) -> rx.Component:
         rx.el.p(
             rx.el.span(
                 service["time"],
-                class_name="text-gray-600 leading-relaxed font-medium mt-2",
+                class_name="text-gray-600 leading-relaxed font-bold mt-2",
             ),
         ),
-        rx.el.button(
-            rx.link(
-                "Ver Mas",
+        rx.el.div(
+            rx.el.a(
+                "Inscribite",
+                rx.icon("square-mouse-pointer", class_name="m-1"),
                 href=service["inscripcion"],
-                class_name="bg-sky-100/70 p-2 rounded-full mb-5",
+                class_name="mt-6 inline-flex items-center px-6 py-2 bg-teal-600 text-white font-semibold rounded-lg shadow-md hover:bg-teal-700 transition-all duration-300",
             ),
-            class_name="flex items-center justify-center mt-6",
+            class_name="flex justify-center"
         ),
-        class_name="bg-white p-8 rounded-m border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300",
+        class_name="bg-white p-8 rounded-4xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300",
     )
 
 
@@ -48,7 +49,7 @@ def services() -> rx.Component:
                     class_name="text-3xl md:text-4xl font-bold text-gray-800",
                 ),
                 rx.el.p(
-                    "Descubre todo lo que Buena Vida tiene para ofrecerte a ti y a tu familia.",
+                    "Descubrí todo lo que tiene Buena Vida para ofrecerte.",
                     class_name="mt-4 text-lg text-gray-600",
                 ),
                 class_name="text-center mb-12",

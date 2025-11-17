@@ -1,18 +1,20 @@
 import reflex as rx
 from buenavida.components.navbar3 import navbar
 from buenavida.components.hero import hero
+from buenavida.components.about_us import about_us
 from buenavida.components.services import services
-from buenavida.components.testimonials import testimonials
-from buenavida.components.cta import cta
 from buenavida.components.footer import footer
-from buenavida.components.contact import contact_form
-from buenavida.states.landing_state import LandingState
+#from buenavida.states.landing_state import LandingState
+#from buenavida.components.contact import contact_form
+#from buenavida.components.cta import cta
+#from buenavida.components.testimonials import testimonials
 
 
 def index() -> rx.Component:
     return rx.el.main(
         navbar(),
         hero(),
+        about_us(),
         services(),
         #testimonials(),
         #cta(),

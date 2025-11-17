@@ -17,6 +17,7 @@ def hero() -> rx.Component:
                 rx.el.p(
                     "Bienvenidxs a la playita de Maipú!",
                     class_name="mt-6 text-lg md:text-xl text-white font-bold max-w-2xl mx-auto",
+                    textShadow = "0 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5)"
                 ),
                 rx.el.div(
                     rx.el.a(

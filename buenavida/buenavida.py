@@ -4,8 +4,8 @@ from buenavida.components.hero import hero
 from buenavida.components.about_us import about_us
 from buenavida.components.services import services
 from buenavida.components.footer import footer
+from buenavida.components.contact import contact
 #from buenavida.states.landing_state import LandingState
-#from buenavida.components.contact import contact_form
 #from buenavida.components.cta import cta
 #from buenavida.components.testimonials import testimonials
 
@@ -18,7 +18,7 @@ def index() -> rx.Component:
         services(),
         #testimonials(),
         #cta(),
-        #contact_form(),
+        contact(),
         footer(),
         class_name="font-['Montserrat'] bg-white",
     )
@@ -32,6 +32,10 @@ app = rx.App(
         rx.el.link(
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap",
             rel="stylesheet",
+        ),
+        rx.el.link(
+            rel="stylesheet",
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         ),
     ],
 )

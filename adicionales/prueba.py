@@ -30,3 +30,8 @@ def coso() -> rx.Component:
             ),
             class_name="px-4 -mt-16 z-10 relative",
         )
+
+on_click=[
+            rx.call_script(
+                f"document.getElementById('{link['href'][1:]}').scrollIntoView({{ behavior: 'smooth' }})"
+            ),

@@ -29,5 +29,6 @@ def about_us() -> rx.Component:
                 ),
                 class_name="bg-white p-8 md:p-16 rounded-3xl shadow-lg border border-gray-100",
             ),
-            class_name="px-4 -mt-16 z-10 relative",
+            class_name="px-4 mt-16 z-10 relative",
+            id="about_us"
         )

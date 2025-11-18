@@ -1,12 +1,6 @@
 import reflex as rx
 from buenavida.states.landing_state import LandingState
 
-def nav_link(text: str, href:str) -> rx.Component:
-    return rx.el.a(
-        text,
-        href=href
-    )
-
 def navbar() -> rx.Component:
     return rx.el.header(
         rx.el.nav(
@@ -17,22 +11,45 @@ def navbar() -> rx.Component:
                         rx.el.span(
                             "Buena Vida", class_name="text-xl font-bold text-gray-800"
                         ),
-                        class_name="flex items-center gap-2",
+                        style={"display": "flex", "alignItems": "center", "gap": "0.5rem"}
                     ),
                     href="/",
                 ),
                 rx.el.div(
-                    nav_link("Servicios", "#servicios"),
-                    nav_link("Sobre Nosotrxs", "#about_us"),
-                    #nav_link("Contacto", "#contacto"),
+                    rx.el.button(
+                        "Sobre Nosotrxs",
+                        href="#about_us",
+                        on_click=rx.call_script("document.getElementById('about_us').scrollIntoView({ behavior: 'smooth' })"),
+                        type="button",
+                        cursor="pointer"
+                    ),
+                    rx.el.button(
+                        "Actividades",
+                        href="#servicios",
+                        on_click=rx.call_script("document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })"),
+                        type="button",
+                        cursor="pointer"
+                    ),
+                    rx.el.button(
+                        "Nuestras Redes",
+                        href="#redes_sociales",
+                        on_click=rx.call_script("document.getElementById('redes_sociales').scrollIntoView({ behavior: 'smooth' })"),
+                        type="button",
+                        cursor="pointer"
+                    ),
                     class_name="hidden md:flex items-center gap-8 text-black font-medium",
                 ),
                 rx.el.div(
-                    rx.el.a(
-                        "Nuestros Servicios",
-                        href="#servicios",
-                        class_name="px-4 py-2 bg-teal-600 text-white font-semibold rounded-md shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-105",
-                    ),
+                    # rx.el.button(
+                    #     "Nuestros Servicios",
+                    #     href="#servicios",
+                    #     class_name="px-4 py-2 bg-teal-600 text-white font-semibold rounded-md shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-105",
+                    #     #behavior="smooth"
+                    #     on_click=rx.call_script(
+                    #     "document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })"
+                    # ),
+                    # type="button"
+                    # ),
                     class_name="hidden md:block",
                 ),
                 rx.el.div(
@@ -46,19 +63,42 @@ def navbar() -> rx.Component:
                     ),
                     class_name="md:hidden",
                 ),
-                class_name="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center",
+                style={
+                "display": "flex",
+                "justifyContent": "space-between",
+                "alignItems": "center",
+                "width": "100%",
+                "maxWidth": "80rem",
+                "marginX": "auto",
+                "paddingX": "1rem",
+            },
             ),
             rx.cond(
                 LandingState.is_mobile_menu_open,
                 rx.el.div(
-                    nav_link("Servicios", "#servicios"),
-                    nav_link("Sobre Nosotrxs", "#about_us"),
-                    #nav_link("Contacto", "#contacto"),
-                    rx.el.a(
-                        "Nuestros Servicios",
-                        href="#servicios",
-                        class_name="w-full text-center mt-4 px-4 py-2 bg-teal-600 text-white font-semibold rounded-md shadow-sm hover:bg-teal-700",
+                    rx.el.button(
+                        "Sobre Nosotrxs",
+                        href="#about_us",
+                        on_click=rx.call_script("document.getElementById('about_us').scrollIntoView({ behavior: 'smooth' })"),
+                        type="button",
+                        cursor="pointer"
                     ),
+                    rx.el.button(
+                        "Actividades",
+                        href="#servicios",
+                        on_click=rx.call_script("document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })"),
+                        type="button",
+                        cursor="pointer"
+                    ),
+                    # rx.el.button(
+                    #     "Nuestros Servicios",
+                    #     href="#servicios",
+                    #     class_name="w-full text-center mt-4 px-4 py-2 bg-teal-600 text-white font-semibold rounded-md shadow-sm hover:bg-teal-700",
+                    #     on_click=rx.call_script(
+                    #     "document.getElementById('services').scrollIntoView({ behavior: 'smooth' })"
+                    # ),
+                    # type="button",
+                    # ),
                     class_name="md:hidden flex flex-col items-center gap-4 pt-4 pb-4 border-t border-gray-200 text-black font-medium",
                 ),
                 None,

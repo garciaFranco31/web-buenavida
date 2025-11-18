@@ -20,15 +20,15 @@ def hero() -> rx.Component:
                     textShadow = "0 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5)"
                 ),
                 rx.el.div(
-                    rx.el.a(
-                        rx.el.button(
-                            "Ver Actividades",
-                            rx.icon("arrow-down", class_name="ml-2"),
-                            class_name="flex items-center justify-center text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105",
-                            background_color=ThemeState.icon_bg,    
-                        ),
+                    rx.el.button(
+                        "Ver Actividades",
+                        rx.icon("arrow-down", class_name="ml-2"),
+                        class_name="flex items-center justify-center text-white px-8 py-4 rounded-xl font-bold text-lg bg-teal-600 hover:bg-teal-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105",
+                        on_click=rx.call_script(
+                            "document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })"),
                         href="#servicios",
                     ),
+                    type="button",
                     class_name="mt-10 flex justify-center",
                 ),
                 class_name="text-center",

@@ -23,7 +23,7 @@ def navbar() -> rx.Component:
                 ),
                 rx.el.div(
                     nav_link("Servicios", "#servicios"),
-                    nav_link("Testimonios", "#testimonios"),
+                    nav_link("Sobre Nosotrxs", "#about_us"),
                     #nav_link("Contacto", "#contacto"),
                     class_name="hidden md:flex items-center gap-8 text-black font-medium",
                 ),
@@ -52,7 +52,7 @@ def navbar() -> rx.Component:
                 LandingState.is_mobile_menu_open,
                 rx.el.div(
                     nav_link("Servicios", "#servicios"),
-                    nav_link("Testimonios", "#testimonios"),
+                    nav_link("Sobre Nosotrxs", "#about_us"),
                     #nav_link("Contacto", "#contacto"),
                     rx.el.a(
                         "Nuestros Servicios",

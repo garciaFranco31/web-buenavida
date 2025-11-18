@@ -1,6 +1,6 @@
 import reflex as rx
 from buenavida.states.theme_state import ThemeState
-
+from buenavida.states.landing_state import LandingState
 
 def hero() -> rx.Component:
     return rx.el.section(
@@ -25,8 +25,7 @@ def hero() -> rx.Component:
                             "Ver Actividades",
                             rx.icon("arrow-down", class_name="ml-2"),
                             class_name="flex items-center justify-center text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105",
-                            background_color=ThemeState.icon_bg,
-                            #class_name="flex items-center justify-center h-16 w-16 rounded-2xl bg-sky-100"
+                            background_color=ThemeState.icon_bg,    
                         ),
                         href="#servicios",
                     ),

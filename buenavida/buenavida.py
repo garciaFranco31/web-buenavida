@@ -5,9 +5,6 @@ from buenavida.components.about_us import about_us
 from buenavida.components.services import services
 from buenavida.components.footer import footer
 from buenavida.components.contact import contact
-#from buenavida.states.landing_state import LandingState
-#from buenavida.components.cta import cta
-#from buenavida.components.testimonials import testimonials
 
 
 def index() -> rx.Component:
@@ -16,8 +13,6 @@ def index() -> rx.Component:
         hero(),
         about_us(),
         services(),
-        #testimonials(),
-        #cta(),
         contact(),
         footer(),
         class_name="font-['Montserrat'] bg-white",
@@ -39,4 +34,4 @@ app = rx.App(
         ),
     ],
 )
-app.add_page(index, title="Buena Vida - Actividades Acuáticas")
+app.add_page(index, title="Buena Vida")

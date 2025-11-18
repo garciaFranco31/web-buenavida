@@ -1,6 +1,5 @@
 import reflex as rx
 from typing import TypedDict
-import re
 import json
 
 def open_file() -> list[dict]:
@@ -12,7 +11,6 @@ def open_file_testimonials() -> list[dict]:
         return json.load(f)
     
 
-
 class Service(TypedDict):
     icon: str
     title: str
@@ -20,45 +18,18 @@ class Service(TypedDict):
     time: str
     inscripcion: str
 
-    # @rx.var
-    # def format_service(self) -> tuple[str,str]:
-    #     if ":" in self.time:
-    #         time_part = self.time.split(":", 1)
-    #         return (f"{time_part[0]}:", time_part[1].strip())
-    #     return ("", self.time)
-
-
 class Testimonial(TypedDict):
     avatar: str
     name: str
     text: str
 
-
-def is_valid_email(email: str) -> bool:
-    pattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
-    return bool(re.match(pattern, email))
-
-
 class LandingState(rx.State):
+
     is_mobile_menu_open: bool = False
     services: list[Service] = open_file()
     
     testimonials: list[Testimonial] = open_file_testimonials()  
 
-    
-
-    toast_message: str = ""
-    show_toast: bool = False
-
-    @rx.event
-    def handle_submit(self, form_data: dict):
-        email = form_data.get("email", "")
-        if not is_valid_email(email):
-            self.toast_message = "Por favor, introduce un email válido."
-            yield rx.toast.error(self.toast_message)
-            return
-        self.toast_message = "¡Gracias por tu mensaje! Te contactaremos pronto."
-        yield rx.toast.success(self.toast_message)
 
     @rx.event
     def toggle_mobile_menu(self):

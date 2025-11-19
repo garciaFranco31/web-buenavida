@@ -1,45 +1,73 @@
 import reflex as rx
+from buenavida.states.navbar_state import NavbarState
+
+
+def navbar_link(name:str, dir:str) -> rx.Component:
+    """A navigation link component."""
+    return rx.el.a(
+        name,
+        href=dir,
+        class_name="text-gray-600 hover:text-blue-600 transition-colors",
+        cursor="pointer",
+        on_click=rx.scroll_to(dir),
+        type="button",
+    )
+
+
+def mobile_menu() -> rx.Component:
+    """The mobile menu component, displayed when the hamburger icon is clicked."""
+    return rx.el.div(
+        rx.el.div(
+            rx.foreach(
+                NavbarState.nav_links,
+                lambda link: rx.el.a(
+                    link["name"],
+                    href=link["href"],
+                    class_name="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100",
+                    on_click=NavbarState.toggle_menu,
+                ),
+            ),
+            class_name="py-1",
+        ),
+        class_name=rx.cond(
+            NavbarState.show_menu,
+            "absolute top-16 right-4 mt-2 w-48 bg-white rounded-md shadow-lg z-20",
+            "hidden",
+        ),
+    )
 
 
 def navbar() -> rx.Component:
+    """The main navigation bar component."""
     return rx.el.header(
         rx.el.div(
-            rx.el.div(
-                rx.icon("sun", class_name="text-sky-500", size=32),
-                rx.el.h1("Buena Vida", class_name="text-2xl font-bold text-gray-800"),
-                class_name="flex items-center space-x-2",
-            ),
-            rx.el.nav(
-                rx.el.a(
-                    "Sobre Nosotrxs",
-                    href="#about_us",
-                    class_name="text-gray-600 font-medium hover:text-sky-500 transition-colors",
-                ),
-                rx.el.a(
-                    "Servicios",
-                    href="#servicios",
-                    class_name="text-gray-600 font-medium hover:text-sky-500 transition-colors",
-                ),
-                rx.el.a(
-                    "Testimonios",
-                    href="#testimonios",
-                    class_name="text-gray-600 font-medium hover:text-sky-500 transition-colors",
-                ),
-                rx.el.a(
-                    "Contacto",
-                    href="#contacto",
-                    class_name="text-gray-600 font-medium hover:text-sky-500 transition-colors",
-                ),
-                class_name="hidden md:flex items-center space-x-8",
-            ),
             rx.el.a(
-                rx.el.button(
-                    "Inscríbete Ahora",
-                    class_name="bg-sky-500 text-white px-5 py-2 rounded-xl font-semibold hover:bg-sky-600 transition-all shadow-sm hover:shadow-md",
+                rx.el.div(
+                    rx.icon("sun", class_name="h-8 w-8 text-sky-600"),
+                    rx.el.span(
+                        "Buena Vida",
+                        class_name="ml-2 text-lg font-semibold text-gray-800",
+                    ),
+                    class_name="flex items-center",
                 ),
-                href="#contacto",
+                href="/",
             ),
-                class_name="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center",
+            rx.el.div(
+                rx.el.nav(
+                    navbar_link("Sobre Nosotrxs", "#about_us"),
+                    navbar_link("Nuestras actividades", "#servicios"),
+                    navbar_link("Contacto", "#redes_sociales"),
+                    class_name="hidden md:flex items-center gap-8",
+                ),
+                rx.el.button(
+                    rx.icon("menu", class_name="h-6 w-6"),
+                    on_click=NavbarState.toggle_menu,
+                    class_name="md:hidden",
+                ),
+                class_name="flex items-center gap-8",
+            ),
+            class_name="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16",
         ),
-        class_name="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100",
+        mobile_menu(),
+        class_name="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-gray-200",
     )

@@ -3,11 +3,11 @@ from typing import TypedDict
 import json
 
 def open_file() -> list[dict]:
-    with open("adicionales/services.json", "r") as f:
+    with open("assets/json/services.json", "r") as f:
         return json.load(f)
 
 def open_file_testimonials() -> list[dict]:
-    with open("adicionales/testimonials.json", "r") as f:
+    with open("assets/json/testimonials.json", "r") as f:
         return json.load(f)
     
 

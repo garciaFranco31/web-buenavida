@@ -1,5 +1,5 @@
 import reflex as rx
-from buenavida.components.navbar3 import navbar
+from buenavida.components.navbar import navbar
 from buenavida.components.hero import hero
 from buenavida.components.about_us import about_us
 from buenavida.components.services import services
@@ -21,6 +21,7 @@ def index() -> rx.Component:
 
 app = rx.App(
     theme=rx.theme(appearance="light"),
+    stylesheets=["styles/styles.css"],
     head_components=[
         rx.el.link(rel="preconnect", href="https://fonts.googleapis.com"),
         rx.el.link(rel="preconnect", href="https://fonts.gstatic.com", cross_origin=""),

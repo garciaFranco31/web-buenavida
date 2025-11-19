@@ -43,7 +43,11 @@ def navbar() -> rx.Component:
         rx.el.div(
             rx.el.a(
                 rx.el.div(
-                    rx.icon("sun", class_name="h-8 w-8 text-sky-600"),
+                    rx.image(
+                        src="/images/icono_5.svg",
+                        width="3.25em",
+                        height="auto",
+                        ),
                     rx.el.span(
                         "Buena Vida",
                         class_name="ml-2 text-lg font-semibold text-gray-800",

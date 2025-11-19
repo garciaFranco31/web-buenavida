@@ -43,7 +43,7 @@ def navbar() -> rx.Component:
         rx.el.div(
             rx.el.a(
                 rx.el.div(
-                    rx.image(
+                    rx.avatar(
                         src="/images/icono_5.svg",
                         width="3.25em",
                         height="auto",

@@ -23,7 +23,7 @@ def mobile_menu() -> rx.Component:
                 lambda link: rx.el.a(
                     link["name"],
                     href=link["href"],
-                    class_name="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100",
+                    class_name="block py-2 px-4 text-sm text-black hover:bg-gray-100",
                     on_click=NavbarState.toggle_menu,
                 ),
             ),
@@ -64,7 +64,7 @@ def navbar() -> rx.Component:
                     class_name="hidden md:flex items-center gap-8",
                 ),
                 rx.el.button(
-                    rx.icon("menu", class_name="h-6 w-6"),
+                    rx.icon("menu", class_name="text-black h-6 w-6", cursor="pointer"),
                     on_click=NavbarState.toggle_menu,
                     class_name="md:hidden",
                 ),

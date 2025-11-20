@@ -7,7 +7,7 @@ def hero() -> rx.Component:
         rx.el.div(
             rx.el.div(
                 rx.el.h1(
-                    "Disfruta el Verano al Máximo en ",
+                    "Disfruta el verano al máximo en ",
                     rx.el.span("Buena Vida", color=ThemeState.form_button_bg),
                     class_name="text-4xl md:text-6xl font-extrabold  leading-tight tracking-tighter drop-shadow-lg",
                     color=ThemeState.white_color,
@@ -36,7 +36,7 @@ def hero() -> rx.Component:
             class_name="container mx-auto px-6 py-20 md:py-32",
         ),
         class_name="relative",
-        background_image="url('/beach.jpg')",
+        background_image="url('images/buenaVida_mar.jpg')",
         background_size="cover",
         image_rendering = "-webkit-optimize-contrast"
     )

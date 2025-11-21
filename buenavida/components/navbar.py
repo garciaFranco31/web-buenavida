@@ -1,5 +1,6 @@
 import reflex as rx
 from buenavida.states.navbar_state import NavbarState
+from buenavida.states.theme_state import ThemeState
 
 
 def navbar_link(name:str, dir:str) -> rx.Component:
@@ -7,7 +8,9 @@ def navbar_link(name:str, dir:str) -> rx.Component:
     return rx.el.a(
         name,
         href=dir,
-        class_name="text-gray-600 hover:text-blue-600 transition-colors",
+        class_name="font-semibold transition-all transform hover:scale-110",
+        color=ThemeState.letter,
+        _hover= {"color": ThemeState.icon_bg},
         cursor="pointer",
         on_click=rx.scroll_to(dir),
         type="button",
@@ -23,7 +26,9 @@ def mobile_menu() -> rx.Component:
                 lambda link: rx.el.a(
                     link["name"],
                     href=link["href"],
-                    class_name="block py-2 px-4 text-sm text-black hover:bg-gray-100",
+                    class_name="font-semibold block py-2 px-4 text-sm transition-all transform hover:scale-100",
+                    _hover= {"background_color": ThemeState.icon_bg},
+                    color=ThemeState.letter,
                     on_click=NavbarState.toggle_menu,
                 ),
             ),
@@ -44,15 +49,22 @@ def navbar() -> rx.Component:
             rx.el.a(
                 rx.el.div(
                     rx.avatar(
-                        src="/images/icono_5.svg",
+                        src="/images/logo_celesteOscuro.jpg",
                         width="3.25em",
                         height="auto",
                         ),
-                    rx.el.span(
-                        "Buena Vida",
-                        class_name="ml-2 text-lg font-semibold text-gray-800",
+                    rx.el.div(
+                        rx.el.span("BUENA VIDA",class_name=f"font-['Mango'] pt-2 leading-none text-2xl font-bold",
+                            color=ThemeState.icon_color,
+                        ),
+                        rx.el.p(
+                            "Club Social",
+                            class_name="leading-none font-semibold tracking-wider",
+                            color=ThemeState.icon_color,
+                        ),    
+                        class_name="flex flex-col justify-center ml-3",
                     ),
-                    class_name="flex items-center",
+                    class_name="flex items-center ",
                 ),
                 href="/",
             ),

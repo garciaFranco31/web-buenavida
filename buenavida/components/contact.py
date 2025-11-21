@@ -21,7 +21,7 @@ def contact() -> rx.Component:
                     rx.el.i(
                         class_name="fa-brands fa-instagram text-6xl transition-colors",
                         color= {ThemeState.icon_color},
-                        _hover= {"color": ThemeState.form_button_bg}
+                        _hover= {"color": ThemeState.icon_bg}
                     ),
                     href="https://www.instagram.com/buenavida.clubsocial?igsh=Z2dueGE0ZmVwemV6",
                 ),
@@ -29,7 +29,7 @@ def contact() -> rx.Component:
                     rx.el.i(
                         class_name=f"fa-brands fa-square-facebook text-6xl text-teal-500 hover:ThemeState.primary_color transition-colors",
                         color= {ThemeState.icon_color},
-                        _hover= {"color": ThemeState.form_button_bg}
+                        _hover= {"color": ThemeState.icon_bg}
                     ),
                     href="https://www.facebook.com/share/1DWjQtQiCq/?mibextid=wwXIfr",
                 ),
@@ -37,7 +37,7 @@ def contact() -> rx.Component:
                     rx.el.i(
                         class_name=f"fa-brands fa-whatsapp text-6xl text-gray-500 transition-colors",
                         color= {ThemeState.icon_color},
-                        _hover= {"color": ThemeState.form_button_bg},
+                        _hover= {"color": ThemeState.icon_bg},
                     ),
                     href=launch_chat(),
                 ),

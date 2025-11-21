@@ -32,7 +32,9 @@ def service_card(service: Service) -> rx.Component:
                 "Inscribite",
                 rx.icon("square-mouse-pointer", class_name="m-1"),
                 href=service["inscripcion"],
-                class_name="mt-6 inline-flex items-center px-6 py-2 bg-teal-600 text-white font-semibold rounded-lg shadow-md hover:bg-teal-700 transition-all duration-300",
+                class_name="mt-6 inline-flex items-center px-6 py-2 text-white font-semibold rounded-lg shadow-md hover:bg-teal-700 transition-all duration-300",
+                background_color=ThemeState.primary_color,
+                _hover={"background_color": ThemeState.header_bg},
             ),
             class_name="flex justify-center"
         ),

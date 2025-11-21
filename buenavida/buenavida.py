@@ -21,9 +21,8 @@ def index() -> rx.Component:
 
 app = rx.App(
     theme=rx.theme(appearance="light"),
-    stylesheets=["styles/styles.css"],
+    stylesheets=["styles/styles.css", "styles/fonts.css"],
     head_components=[
-        #rx.el.link(rel="icon", type="image/png", href="images/icono_6.svg"),
         rx.el.link(rel="preconnect", href="https://fonts.googleapis.com"),
         rx.el.link(rel="preconnect", href="https://fonts.gstatic.com", cross_origin=""),
         rx.el.link(

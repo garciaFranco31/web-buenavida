@@ -8,6 +8,6 @@ class ThemeState(rx.State):
     primary_complementary: str = "#33b3b2"
     icon_bg: str = "#8ad0ce"
     icon_color: str = "#137c78"
-    white_color: str = "#E6E6E6"
+    white_color: str = "#F0E9E9"
     letter: str = "#3d3d3d"
 

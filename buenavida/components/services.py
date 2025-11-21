@@ -63,5 +63,6 @@ def services() -> rx.Component:
             class_name="container mx-auto px-6 py-20",
         ),
         id="servicios",
-        class_name="bg-gray-50/70",
+        #class_name="bg-gray-50/70",
+        background_color=ThemeState.white_color
     )

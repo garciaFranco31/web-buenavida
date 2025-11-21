@@ -86,4 +86,5 @@ def navbar() -> rx.Component:
         ),
         mobile_menu(),
         class_name="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-gray-200",
+       # background_color=ThemeState.white_color
     )

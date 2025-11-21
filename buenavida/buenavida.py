@@ -5,7 +5,7 @@ from buenavida.components.about_us import about_us
 from buenavida.components.services import services
 from buenavida.components.footer import footer
 from buenavida.components.contact import contact
-
+from buenavida.states.theme_state import ThemeState
 
 def index() -> rx.Component:
     return rx.el.main(
@@ -15,7 +15,8 @@ def index() -> rx.Component:
         services(),
         contact(),
         footer(),
-        class_name="font-['Montserrat'] bg-white",
+        class_name="font-['Montserrat']",
+        background_color=ThemeState.white_color
     )
 
 

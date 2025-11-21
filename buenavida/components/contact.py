@@ -43,7 +43,9 @@ def contact() -> rx.Component:
                 ),
                 class_name="flex items-center space-x-20"
             ),
-            class_name="flex flex-col items-center gap-12 p-8 mx-0 md:p-25  shadow-lg flex justify-center py-16 md:py-24 px-4 bg-gray-50/70",
+            class_name="flex flex-col items-center gap-12 p-8 mx-0 md:p-25  shadow-lg flex justify-center py-16 md:py-24 px-4 ",
+            background_color=ThemeState.white_color,
         ),
-        id="redes_sociales"
+        id="redes_sociales",
+        background_color=ThemeState.white_color,
     )

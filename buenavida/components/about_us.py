@@ -39,7 +39,7 @@ def about_us() -> rx.Component:
 
                         ),
                         class_name="md:w-1/2 mt-10 md:mt-0",
-                        width="auto",
+                        width="22em",
                     ),
                     class_name="flex flex-col md:flex-row justify-between items-center gap-8",
                 ),

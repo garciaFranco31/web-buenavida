@@ -34,6 +34,7 @@ app = rx.App(
             rel="stylesheet",
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         ),
+        rx.el.link(rel="icon", href="images/favicon.ico")
     ],
 )
-app.add_page(index, title="Buena Vida")
+app.add_page(index,title="Buena Vida")

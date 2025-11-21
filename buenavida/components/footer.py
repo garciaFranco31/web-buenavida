@@ -6,7 +6,8 @@ def footer() -> rx.Component:
         rx.el.div(
             rx.el.p(
                     "© 2024 Buena Vida. Todos los derechos reservados.",
-                    class_name="text-center text-gray-500 font-2xs",
+                    class_name="text-center text-gray-500",
+                    font_size="10px"
                 ),
             class_name="py-8",
             background_color=ThemeState.white_color,

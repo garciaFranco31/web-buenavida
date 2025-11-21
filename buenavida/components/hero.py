@@ -35,8 +35,9 @@ def hero() -> rx.Component:
             ),
             class_name="container mx-auto px-6 py-20 md:py-32",
         ),
-        class_name="relative",
+        class_name="relative 40em",
         background_image="url('images/buenaVida_mar.jpg')",
         background_size="cover",
+        #top="50%",
         image_rendering = "-webkit-optimize-contrast"
     )

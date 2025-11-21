@@ -64,7 +64,7 @@ def navbar() -> rx.Component:
                     class_name="hidden md:flex items-center gap-8",
                 ),
                 rx.el.button(
-                    rx.icon("menu", class_name="text-black h-6 w-6", cursor="pointer"),
+                    rx.icon("menu", class_name="text-black h-6 w-6  ", cursor="pointer"),
                     on_click=NavbarState.toggle_menu,
                     class_name="md:hidden",
                 ),

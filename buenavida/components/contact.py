@@ -1,6 +1,10 @@
 import reflex as rx
 from buenavida.states.theme_state import ThemeState
+from buenavida.states.wpp_state import ConfigWpp
 
+def launch_chat() -> str:
+        phone_number = "+5491160534556"
+        return f"https://wa.me/{phone_number}"
 
 def contact() -> rx.Component:
     return rx.el.section(
@@ -27,7 +31,7 @@ def contact() -> rx.Component:
                         color= {ThemeState.icon_color},
                         _hover= {"color": ThemeState.form_button_bg}
                     ),
-                    href="#",
+                    href="https://www.facebook.com/share/1DWjQtQiCq/?mibextid=wwXIfr",
                 ),
                 rx.el.a(
                     rx.el.i(
@@ -35,7 +39,7 @@ def contact() -> rx.Component:
                         color= {ThemeState.icon_color},
                         _hover= {"color": ThemeState.form_button_bg},
                     ),
-                    href="#",
+                    href=launch_chat(),
                 ),
                 class_name="flex items-center space-x-20"
             ),
